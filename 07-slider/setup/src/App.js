@@ -23,7 +23,7 @@ function App() {
       setIndex(index + 1);
     }, 3000);
     return clearInterval(slider); // cleanup function. important.
-  });
+  }, [index]);
 
   return (
     <section className="section">
