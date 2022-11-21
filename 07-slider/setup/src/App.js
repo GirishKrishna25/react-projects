@@ -22,7 +22,7 @@ function App() {
     let slider = setInterval(() => {
       setIndex(index + 1);
     }, 3000);
-    return clearInterval(slider); // cleanup function. important.
+    return () => clearInterval(slider); // cleanup function. important.
   }, [index]);
 
   return (
