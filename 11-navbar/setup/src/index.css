@@ -58,8 +58,8 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: var(--clr-grey-10);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -186,6 +186,7 @@ nav {
   overflow: hidden;
   transition: var(--transition);
 }
+/* instead of this hard-coding, we find height through 'useRef' */
 .show-container {
   height: 10rem;
 }
@@ -204,6 +205,8 @@ nav {
   .nav-toggle {
     display: none;
   }
+  /* we provided inline styling while using useRef. so applying !important is mandatory.
+  otherwise links don't show up. */
   .links-container {
     height: auto !important;
   }
